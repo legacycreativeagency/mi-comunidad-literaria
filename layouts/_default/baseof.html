@@ -95,9 +95,9 @@
       <h1>{{ .Site.Title }}</h1>
       <p>Por Jonathan Matute · Comunidad Narrativa</p>
       <nav>
-        <a href="/">Inicio</a>
-        <a href="/sobre-mi/">Sobre el Autor</a>
-        <a href="/novelas/">Novelas</a>
+        <a href="{{ "" | relURL }}">Inicio</a>
+        <a href="{{ "sobre-mi/" | relURL }}">Sobre el Autor</a>
+        <a href="{{ "novelas/" | relURL }}">Novelas</a>
       </nav>
     </header>
     <main>{{ block "main" . }}{{ end }}</main>
