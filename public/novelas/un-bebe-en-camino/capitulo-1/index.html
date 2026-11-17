@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heridas cubiertas con tinta — Jonathan Matute</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 35px 15px;
+      font-family: Georgia, serif;
+      line-height: 1.85;
+      color: #1f1c18;
+      background-color: #27221f;
+      background-image:
+        radial-gradient(circle at 6% 18%, rgba(12, 10, 9, 0.85) 0%, rgba(12, 10, 9, 0.5) 28px, transparent 32px),
+        radial-gradient(circle at 9% 21%, rgba(12, 10, 9, 0.7) 0%, transparent 14px),
+        radial-gradient(circle at 4% 24%, rgba(12, 10, 9, 0.6) 0%, transparent 9px),
+        radial-gradient(circle at 94% 72%, rgba(12, 10, 9, 0.85) 0%, rgba(12, 10, 9, 0.5) 34px, transparent 38px),
+        radial-gradient(circle at 90% 68%, rgba(12, 10, 9, 0.75) 0%, transparent 15px),
+        radial-gradient(circle at 96% 78%, rgba(12, 10, 9, 0.6) 0%, transparent 10px),
+        radial-gradient(circle at 5% 82%, rgba(180, 83, 9, 0.16) 0%, transparent 55px),
+        radial-gradient(circle at 93% 22%, rgba(180, 83, 9, 0.16) 0%, transparent 55px),
+        url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='180' height='260' viewBox='0 0 180 260'%3E%3Cg fill='none' stroke='%23d6c7b2' stroke-width='1.4' opacity='0.22'%3E%3Cpath d='M35 220 C55 150, 95 85, 145 25 C125 65, 115 110, 85 165 C65 195, 45 210, 35 220 Z' fill='%23d6c7b2' fill-opacity='0.12'/%3E%3Cpath d='M28 235 L145 25' stroke-width='2'/%3E%3Cpath d='M75 135 L58 128 M92 108 L74 100 M110 80 L94 74'/%3E%3Ccircle cx='32' cy='242' r='3.5' fill='%230c0a09'/%3E%3Ccircle cx='22' cy='234' r='2' fill='%230c0a09'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat-y;
+      background-position: left top, left top, left top, right bottom, right bottom, right bottom, left bottom, right top, left 15px top;
+    }
+
+    .hoja-central {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fdfbf7;
+      padding: 35px 42px;
+      border-radius: 12px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+      border-left: 5px solid #92400e;
+      border-right: 5px solid #92400e;
+    }
+
+    header {
+      background: #18181b;
+      color: #ffffff;
+      padding: 26px 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+      border-bottom: 4px solid #b45309;
+    }
+
+    header h1 {
+      margin: 0 0 4px 0;
+      font-family: Georgia, serif;
+      font-size: 30px;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      margin: 0 0 16px 0;
+      font-family: sans-serif;
+      font-size: 14px;
+      color: #d6d3d1;
+      font-style: italic;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #fbbf24;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    h2, h3 {
+      font-family: sans-serif;
+      color: #1c1917;
+    }
+
+    @media (max-width: 600px) {
+      .hoja-central {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hoja-central">
+    <header>
+      <h1>Heridas cubiertas con tinta</h1>
+      <p>Por Jonathan Matute · Comunidad Narrativa</p>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/sobre-mi/">Sobre el Autor</a>
+        <a href="/novelas/">Novelas</a>
+      </nav>
+    </header>
+    <main>
+  <div style="margin-bottom: 25px; display: flex; gap: 12px; flex-wrap: wrap;">
+    <a href="#zona-lectura" style="background: #0056b3; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-family: sans-serif; font-weight: bold;">📖 Leer novela en línea</a>
+    <button onclick="descargarPDF()" style="background: #b71c1c; color: white; padding: 10px 18px; border: none; border-radius: 6px; font-family: sans-serif; font-weight: bold; cursor: pointer;">📄 Descargar en PDF</button>
+  </div>
+
+  <article id="zona-lectura" style="background: #faf9f6; padding: 25px; border-radius: 8px;">
+    <h2>1. Uniforme prestado en pasillos dorados.</h2>
+    <p>El olor del colegio San Patricio no se parecía al de ningún otro lugar en el que Victoria hubiera estado jamás. Olía a madera de roble recién pulida, a perfume importado de sándalo y, sobre todo, a dinero. Un aroma invisible pero pesado, que parecía recordarle en cada esquina que ella no pertenecía allí.</p>
+<p>Mientras caminaba por el pasillo principal, esquivando a jóvenes que discutían sobre sus próximas vacaciones en Suiza o el último modelo de auto que sus padres les habían regalado por cumplir los diecisiete, Victoria se ajustó la falda. El uniforme le quedaba un poco grande; era un donativo de segunda mano que su madre había cosido pacientemente en las noches para adaptarlo a su silueta delgada. Cada paso que daba con esos zapatos gastados, pero impecablemente limpios, era un acto de resistencia. Ella estaba allí por una sola razón: una beca de excelencia académica. Para los demás, el colegio era un derecho de cuna; para ella, la única salida del barrio.</p>
+<p>En la cúspide de esa pirámide social se encontraba Julián. Hijo de un CEO multimillonario, Julián caminaba por los pasillos con la seguridad de quien sabe que es dueño del suelo que pisa. Atractivo, brillante y peligrosamente aburrido, lideraba el grupo de los intocables del colegio. Para ellos, la vida era un juego sin consecuencias.</p>
+<p>Ese martes, el aburrimiento de la élite encontró su próximo entretenimiento.</p>
+<p>Victoria estaba en la biblioteca, el único lugar donde encontraba paz, cuando Julián y sus amigos se sentaron en su mesa. No hubo gritos ni insultos directos; la crueldad de los ricos suele ser sutil y educada.</p>
+<p>—Victoria, tenemos un dilema y pensamos que la mente más brillante del San Patricio podría ayudarnos —dijo Julián, con una sonrisa perfecta que no llegaba a sus ojos—. Hicimos una apuesta sobre el orgullo. Queremos ver si es verdad que todos tienen un precio, o si la dignidad de los becados realmente existe.</p>
+<p>El reto era simple en apariencia, pero perverso en el fondo. Le ofrecieron una suma de dinero que cubriría un año entero de los medicamentos de su madre y garantizaría su tranquilidad económica hasta la graduación. Julián se inclinó hacia adelante, apoyando los codos sobre la mesa de madera pulida. Su voz bajó a un susurro, adoptando un tono falsamente confidente que a cualquiera le habría parecido encantador, pero que a Victoria le heló la sangre.</p>
+<p>—El reto es sencillo, Victoria —dijo, con una chispa de diversión cruel en los ojos—. Vamos a jugar a las apariencias. Tienes tres meses para hacer que yo me enamore de ti. Si lo logras, mi padre financiará tu carrera universitaria entera, en el país que elijas. Pero hay una cláusula de pérdida.</p>
+<p>Victoria lo miró en silencio, manteniendo la espalda recta a pesar del temblor en sus manos.</p>
+<p>—¿Y cuál es? —preguntó, intentando que su voz no flaqueara.</p>
+<p>—Si en esos tres meses eres tú la que cae&hellip; si te enamoras de mí, el juego termina. Serás la vergüenza pública del San Patricio; proyectaremos los videos de tus confesiones en el auditorio para que todos vean cómo la estudiante brillante se arrodilló por un poco de atención. Y lo peor&hellip; —Julián sonrió, una mueca fría que desnudó sus verdaderas intenciones de poder—. Firmarás un contrato donde estipules que perdiste tu dignidad. Tendrás que aceptar mi patrocinio económico, pero bajo mis condiciones. Pasarás a ser de mi propiedad, una acompañante a sueldo, pagada para cuando yo decida. Demostraremos que, al final, tu mente brillante también tiene un precio en la cama.</p>
+<p>El silencio que siguió en la biblioteca fue sepulcral. Los amigos de Julián contenían las risas, frotándose las manos ante la humillación inminente.</p>
+<p>Victoria sintió que el aire se volvía espeso. El reto era una aberración, una trampa psicológica diseñada no solo para romper su futuro, sino para destruir su integridad como mujer. Sabía perfectamente que Julián jugaba con ventaja: él tenía el dinero, el estatus y un encanto manipulador que usaba como arma. Ella solo tenía su intelecto y un uniforme prestado.</p>
+<p>Sin embargo, la desesperación es un combustible peligroso. Esa misma mañana, el médico le había advertido que el tratamiento de su madre no podía suspenderse o las consecuencias serían fatales. No tenía opciones. No tenía tiempo.</p>
+<p>Miró a Julián fijamente, obligándose a enterrar el miedo dentro de su pecho. Él pensaba que ella era débil porque era pobre. Él creía que el dinero podía comprar el alma de las personas.</p>
+<p>—Acepto —dijo Victoria, con una frialdad que sorprendió al propio Julián—. Pero recuerda algo, Julián: el orgullo que se construye con las manos vacías es mucho más difícil de romper que el que se compra con la billetera de papá.</p>
+<p>Se levantó de la mesa, recogió sus libros usados y caminó con paso firme hacia la salida. Acababa de cruzar la línea hacia el periodo más doloroso y oscuro de su vida, el laberinto de mentiras que, años más tarde, la convertiría en la mujer indestructible que estaba destinada a ser.</p>
+
+  </article>
+
+  <nav style="margin-top: 35px; padding-top: 20px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; font-family: sans-serif;">
+    <div>
+      
+        <a href="/novelas/un-bebe-en-camino/capitulo-2/" style="background: #eee; color: #222; padding: 10px 15px; text-decoration: none; border-radius: 6px; font-weight: bold;">← 2. El arte de la manipulación.</a>
+      
+    </div>
+    <div>
+      
+    </div>
+  </nav>
+
+  <section style="margin-top: 45px; padding-top: 25px; border-top: 2px solid #eee;">
+    <h3 style="font-family: sans-serif;">💬 Comentarios de la Comunidad</h3>
+    <div id="giscus-container"></div>
+  </section>
+
+  <script>
+    const s = document.createElement('script');
+    s.src = 'https:' + '//://cloudflare.com';
+    document.head.appendChild(s);
+
+    function descargarPDF() {
+      const zona = document.getElementById('zona-lectura');
+      const opciones = {
+        margin: 15,
+        filename: '1.-uniforme-prestado-en-pasillos-dorados..pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, backgroundColor: '#ffffff' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opciones).from(zona).save();
+    }
+
+    const g = document.createElement('script');
+    g.src = 'https:' + '//giscus.app/client.js';
+    g.setAttribute('data-repo', 'legacycreativeagency/mi-comunidad-literaria');
+    g.setAttribute('data-repo-id', 'R_kgDOVyBktw');
+    g.setAttribute('data-category', 'General');
+    g.setAttribute('data-category-id', 'DIC_kwDOVyBkt84DLW1F');
+    g.setAttribute('data-mapping', 'pathname');
+    g.setAttribute('data-strict', '0');
+    g.setAttribute('data-reactions-enabled', '1');
+    g.setAttribute('data-emit-metadata', '0');
+    g.setAttribute('data-input-position', 'bottom');
+    g.setAttribute('data-theme', 'preferred_color_scheme');
+    g.setAttribute('data-lang', 'es');
+    g.crossOrigin = 'anonymous';
+    g.async = true;
+    document.getElementById('giscus-container').appendChild(g);
+  </script>
+</main>
+  </div>
+</body>
+</html>

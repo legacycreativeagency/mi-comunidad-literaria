@@ -1,0 +1,64 @@
+{{ define "main" }}
+  <div style="margin-bottom: 25px; display: flex; gap: 12px; flex-wrap: wrap;">
+    <a href="#zona-lectura" style="background: #0056b3; color: white; padding: 10px 18px; text-decoration: none; border-radius: 6px; font-family: sans-serif; font-weight: bold;">📖 Leer novela en línea</a>
+    <button onclick="descargarPDF()" style="background: #b71c1c; color: white; padding: 10px 18px; border: none; border-radius: 6px; font-family: sans-serif; font-weight: bold; cursor: pointer;">📄 Descargar en PDF</button>
+  </div>
+
+  <article id="zona-lectura" style="background: #faf9f6; padding: 25px; border-radius: 8px;">
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+  </article>
+
+  <nav style="margin-top: 35px; padding-top: 20px; border-top: 1px solid #ddd; display: flex; justify-content: space-between; font-family: sans-serif;">
+    <div>
+      {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" style="background: #eee; color: #222; padding: 10px 15px; text-decoration: none; border-radius: 6px; font-weight: bold;">← {{ .Title }}</a>
+      {{ end }}
+    </div>
+    <div>
+      {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" style="background: #0056b3; color: white; padding: 10px 15px; text-decoration: none; border-radius: 6px; font-weight: bold;">{{ .Title }} →</a>
+      {{ end }}
+    </div>
+  </nav>
+
+  <section style="margin-top: 45px; padding-top: 25px; border-top: 2px solid #eee;">
+    <h3 style="font-family: sans-serif;">💬 Comentarios de la Comunidad</h3>
+    <div id="giscus-container"></div>
+  </section>
+
+  <script>
+    const s = document.createElement('script');
+    s.src = 'https:' + '//://cloudflare.com';
+    document.head.appendChild(s);
+
+    function descargarPDF() {
+      const zona = document.getElementById('zona-lectura');
+      const opciones = {
+        margin: 15,
+        filename: '{{ .Title | urlize }}.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, backgroundColor: '#ffffff' },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opciones).from(zona).save();
+    }
+
+    const g = document.createElement('script');
+    g.src = 'https:' + '//giscus.app/client.js';
+    g.setAttribute('data-repo', 'legacycreativeagency/mi-comunidad-literaria');
+    g.setAttribute('data-repo-id', 'R_kgDOVyBktw');
+    g.setAttribute('data-category', 'General');
+    g.setAttribute('data-category-id', 'DIC_kwDOVyBkt84DLW1F');
+    g.setAttribute('data-mapping', 'pathname');
+    g.setAttribute('data-strict', '0');
+    g.setAttribute('data-reactions-enabled', '1');
+    g.setAttribute('data-emit-metadata', '0');
+    g.setAttribute('data-input-position', 'bottom');
+    g.setAttribute('data-theme', 'preferred_color_scheme');
+    g.setAttribute('data-lang', 'es');
+    g.crossOrigin = 'anonymous';
+    g.async = true;
+    document.getElementById('giscus-container').appendChild(g);
+  </script>
+{{ end }}
