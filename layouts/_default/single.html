@@ -56,19 +56,19 @@
 
     function votarEncuesta(indice) {
       const clave = 'encuesta_' + window.location.pathname;
-      let votos = JSON.parse(localStorage.getItem(clave)) ||;
-      votos[indice]++;
+      const guardado = localStorage.getItem(clave);
+      const votos = guardado ? JSON.parse(guardado) : new Array(0, 0, 0);
+      votos.splice(indice, 1, votos.at(indice) + 1);
       localStorage.setItem(clave, JSON.stringify(votos));
       const total = votos.reduce((a, b) => a + b, 0);
-      const textos = ['Sí, lo he vivido', 'No, nunca', 'Estoy viviendo uno ahora'];
+      const textos = new Array('Sí, lo he vivido', 'No, nunca', 'Estoy viviendo uno ahora');
       const contenedor = document.getElementById('opciones-encuesta');
       contenedor.innerHTML = votos.map((v, i) => {
         const pct = Math.round((v / total) * 100);
-        return `<div style="background: #f0f9ff; border-radius: 25px; overflow: hidden; border: 1px solid #bae6fd;">
-          <div style="width: ${pct}%; background: #bae6fd; padding: 10px 16px; white-space: nowrap; font-weight: bold; color: #0c4a6e;">
-            ${pct}% — ${textos[i]}
-          </div>
-        </div>`;
+        return '<div style="background: #f0f9ff; border-radius: 25px; overflow: hidden; border: 1px solid #bae6fd;">' +
+          '<div style="width: ' + pct + '%; background: #bae6fd; padding: 10px 16px; white-space: nowrap; font-weight: bold; color: #0c4a6e;">' +
+          pct + '% — ' + textos.at(i) +
+          '</div></div>';
       }).join('');
       document.getElementById('total-votos').innerText = total + (total === 1 ? ' respuesta' : ' respuestas');
     }
