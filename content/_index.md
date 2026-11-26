@@ -10,6 +10,3 @@ title: "Heridas cubiertas con tinta"
 
 * 📖 Explora las novelas y capítulos publicados en la pestaña **Novelas**.
 * ✍️ Conoce la trayectoria completa del autor en **Sobre el Autor**.
-
-- [Novelas](/mi-comunidad-literaria/novelas/)
-- [Sobre el Autor: Jonathan Matute](/mi-comunidad-literaria/sobre-mi/)
