@@ -1,6 +1,6 @@
 baseURL = "https://legacycreativeagency.github.io/mi-comunidad-literaria/"
 languageCode = 'en-us'
-title = "Heridas cubiertas con tinta"
+title = 'Jonathan Matute | Heridas cubiertas con tinta'
 
 [markup.goldmark.renderer]
   unsafe = true
